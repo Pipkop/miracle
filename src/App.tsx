@@ -13,17 +13,17 @@ const SDKInitialState = () => <Page><Navbar title="Intialize" /></Page>;
 function App() {
   return (
     <SDKProvider>
-      {/* <DisplayGate
+      <DisplayGate
         error={SDKProviderError}
         loading={SDKProviderLoading}
         initial={SDKInitialState}
-      > */}
-      <BrowserRouter>
-        <ThemeProvider>
-          <BaseRoutes />
-        </ThemeProvider>
-      </BrowserRouter>
-      {/* </DisplayGate> */}
+      >
+        <BrowserRouter>
+          <ThemeProvider>
+            <BaseRoutes />
+          </ThemeProvider>
+        </BrowserRouter>
+      </DisplayGate>
     </SDKProvider >
   )
 }
