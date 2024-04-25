@@ -1,14 +1,25 @@
-import { Page, Navbar, } from 'konsta/react';
-import { BrowserRouter } from 'react-router-dom';
-import { SDKProvider, DisplayGate } from '@tma.js/sdk-react';
-import { ThemeProvider } from './Theme';
-import { BaseRoutes } from './Routes';
-import './App.css'
+import { Page, Navbar } from "konsta/react";
+import { BrowserRouter } from "react-router-dom";
+import { SDKProvider, DisplayGate } from "@tma.js/sdk-react";
+import { ThemeProvider } from "./Theme";
+import { BaseRoutes } from "./Routes";
+import "./App.css";
 
-const SDKProviderError = () => <Page><Navbar title="Error" /></Page>;
-const SDKProviderLoading = () => <Page><Navbar title="Loading" /></Page>;
-const SDKInitialState = () => <Page><Navbar title="Intialize" /></Page>;
-
+const SDKProviderError = () => (
+  <Page>
+    <Navbar title="Error" />
+  </Page>
+);
+const SDKProviderLoading = () => (
+  <Page>
+    <Navbar title="Loading" />
+  </Page>
+);
+const SDKInitialState = () => (
+  <Page>
+    <Navbar title="Intialize" />
+  </Page>
+);
 
 function App() {
   return (
@@ -24,10 +35,8 @@ function App() {
           </ThemeProvider>
         </BrowserRouter>
       </DisplayGate>
-    </SDKProvider >
-  )
+    </SDKProvider>
+  );
 }
 
-
-export default App
-
+export default App;
