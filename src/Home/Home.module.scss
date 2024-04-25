@@ -1,0 +1,17 @@
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--tg-theme-primary-color);
+    color: var(--tg-theme-primary-text-color);
+    padding: 1rem;
+}
+
+.body {
+    background-color: var(--tg-theme-hint-color);
+}
