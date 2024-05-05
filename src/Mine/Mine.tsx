@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { Button } from "konsta/react";
+import clsx from "clsx";
 import { Body, Header } from "../Components";
 import { BackButton } from "../Components";
 import barsIcon from "../assets/bars.png";
@@ -88,36 +89,41 @@ const MineBase = ({ mine }: { mine: MineType }) => {
         </div>
 
         <div className="flex justify-between px-4 py-2 items-center">
-          {[3, 2, 4, 1, 5].map((order, index) => {
-            const resource = mine.resource.craftResource[index];
+          {["order-3", "order-2", "order-4", "order-1", "order-5"].map(
+            (order, index) => {
+              const resource = mine.resource.craftResource[index];
 
-            if (resource === undefined) {
+              if (resource === undefined) {
+                return (
+                  <div
+                    key={order}
+                    className={clsx(
+                      "w-12 h-12 rounded-full bg-gray-900",
+                      order
+                    )}
+                  />
+                );
+              }
+
+              const resourceMine = mines[resource.id];
+
               return (
-                <div
-                  key={order}
-                  className={`w-12 h-12 rounded-full bg-gray-900 order-${order}`}
-                />
+                <div key={order} className={order}>
+                  <Link
+                    className="flex flex-col items-center"
+                    to={resourceMine ? `/mine/${resourceMine.id}` : "."}
+                  >
+                    <span>{resourceMine ? resourceMine.store : "N/A"}</span>
+                    <img
+                      src={resource.image}
+                      className="w-12 h-12 rounded-full border-2 border-gray-600"
+                    />
+                    <span>{resource.count}</span>
+                  </Link>
+                </div>
               );
             }
-
-            const resourceMine = mines[resource.id];
-
-            return (
-              <div key={order} className={`order-${order}`}>
-                <Link
-                  className="flex flex-col items-center"
-                  to={resourceMine ? `/mine/${resourceMine.id}` : "."}
-                >
-                  <span>{resourceMine ? resourceMine.store : "N/A"}</span>
-                  <img
-                    src={resource.image}
-                    className="w-12 h-12 rounded-full border-2 border-gray-600"
-                  />
-                  <span>{resource.count}</span>
-                </Link>
-              </div>
-            );
-          })}
+          )}
         </div>
 
         <Button
