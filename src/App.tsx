@@ -29,7 +29,7 @@ function App() {
         loading={SDKProviderLoading}
         initial={SDKInitialState}
       >
-        <BrowserRouter>
+        <BrowserRouter basename="/miracle">
           <ThemeProvider>
             <BaseRoutes />
           </ThemeProvider>
