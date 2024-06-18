@@ -1,27 +1,8 @@
 import { create } from "zustand";
-import coal from "./assets/coal.png";
-import iron from "./assets/iron.png";
-import copper from "./assets/copper.jpeg";
-import silver from "./assets/silver.jpeg";
-import gold from "./assets/gold.jpeg";
-import diamond from "./assets/diamond.jpeg";
-import emerald from "./assets/emerald.jpeg";
-import ruby from "./assets/ruby.jpeg";
-import sapphire from "./assets/sapphire.jpeg";
-import amethyst from "./assets/amethyst.jpeg";
+import config from "./config.json";
 
-export const resourceList = [
-  "coal",
-  "iron",
-  "copper",
-  "silver",
-  "gold",
-  "diamond",
-  "emerald",
-  "ruby",
-  "sapphire",
-  "amethyst",
-] as const;
+export const resourceList = config.map(({ id }) => id);
+
 export type ResourceId = (typeof resourceList)[number];
 
 export type ResourceType = {
@@ -44,55 +25,12 @@ export type MineType = {
   store: number;
   maxStore: number;
   levelStore: number;
+  fabric: number;
+  maxFabric: number;
+  levelFabric: number;
 };
 
-export const resources: readonly ResourceType[] = [
-  { id: "coal", name: "Coal", image: coal, craftResource: [] },
-  {
-    id: "iron",
-    name: "Iron",
-    image: iron,
-    craftResource: [{ id: "coal", image: coal, count: 10 }],
-  },
-  {
-    id: "copper",
-    name: "Copper",
-    image: copper,
-    craftResource: [{ id: "iron", image: iron, count: 1 }],
-  },
-  {
-    id: "silver",
-    name: "Silver",
-    image: silver,
-    craftResource: [{ id: "gold", image: gold, count: 1 }],
-  },
-  {
-    id: "gold",
-    name: "Gold",
-    image: gold,
-    craftResource: [{ id: "ruby", image: ruby, count: 1 }],
-  },
-  { id: "diamond", name: "Diamond", image: diamond, craftResource: [] },
-  { id: "emerald", name: "Emerald", image: emerald, craftResource: [] },
-  { id: "ruby", name: "Ruby", image: ruby, craftResource: [] },
-  { id: "sapphire", name: "Sapphire", image: sapphire, craftResource: [] },
-  { id: "amethyst", name: "Amethyst", image: amethyst, craftResource: [] },
-] as const;
-
-export const availableMines: MineType[] = resources.map((resource, index) => ({
-  id: resource.id,
-  resource: resource,
-  craftResource: [],
-  updatePrice: Array.from(
-    { length: 10 },
-    (_, i) => Math.pow(2, i) * (index + 1)
-  ),
-  sellPrice: index + 1,
-  unlockPrice: index * 10,
-  store: 0,
-  maxStore: 10,
-  levelStore: 0,
-}));
+export const availableMines = config;
 
 export type UserStoreType = {
   coin: number;
@@ -105,9 +43,7 @@ export type UserStoreType = {
 
 export const userStore = create<UserStoreType>((set) => ({
   coin: 0,
-  mines: {
-    coal: availableMines[0],
-  },
+  mines: {},
   toMine: (mine: MineType) => {
     set((state) => ({
       mines: {

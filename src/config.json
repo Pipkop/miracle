@@ -1,0 +1,529 @@
+[
+  {
+    "id": "sand",
+    "resource": {
+      "id": "sand",
+      "name": "Sand",
+      "image": "/miracle/src/assets/sand.png",
+      "craftResource": []
+    },
+    "craftResource": [],
+    "updatePrice": [1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
+    "sellPrice": 1,
+    "unlockPrice": 0,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "pachinko_machine",
+    "resource": {
+      "id": "pachinko_machine",
+      "name": "Pachinko machine",
+      "image": "/miracle/src/assets/pachinko_machine.png",
+      "craftResource": [
+        {
+          "id": "glass",
+          "image": "/miracle/src/assets/glass.png",
+          "count": 1
+        },
+		{
+          "id": "plastic",
+          "image": "/miracle/src/assets/plastic.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [5, 10, 20, 40, 80, 160, 320, 640, 1280, 2560],
+    "sellPrice": 5,
+    "unlockPrice": 40,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "glass",
+    "resource": {
+      "id": "glass",
+      "name": "Glass",
+      "image": "/miracle/src/assets/glass.png",
+      "craftResource": [
+        {
+          "id": "sand",
+          "image": "/miracle/src/assets/sand.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024],
+    "sellPrice": 2,
+    "unlockPrice": 10,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "coal",
+    "resource": {
+      "id": "coal",
+      "name": "Coal",
+      "image": "/miracle/src/assets/coal.png",
+      "craftResource": []
+    },
+    "craftResource": [],
+    "updatePrice": [3, 6, 12, 24, 48, 96, 192, 384, 768, 1536],
+    "sellPrice": 3,
+    "unlockPrice": 20,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "plastic",
+    "resource": {
+      "id": "plastic",
+      "name": "Plastic",
+      "image": "/miracle/src/assets/plastic.png",
+      "craftResource": [
+        {
+          "id": "coal",
+          "image": "/miracle/src/assets/coal.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048],
+    "sellPrice": 4,
+    "unlockPrice": 30,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "tamagotchi",
+    "resource": {
+      "id": "tamagotchi",
+      "name": "Tamagotchi",
+      "image": "/miracle/src/assets/tamagotchi.png",
+      "craftResource": [
+        {
+          "id": "glass",
+          "image": "/miracle/src/assets/glass.png",
+          "count": 1
+        },
+		{
+          "id": "transistor",
+          "image": "/miracle/src/assets/transistor.png",
+          "count": 1
+        },
+		{
+          "id": "copper",
+          "image": "/miracle/src/assets/copper.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [9, 18, 36, 72, 144, 288, 576, 1152, 2304, 4608],
+    "sellPrice": 9,
+    "unlockPrice": 80,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "silicon",
+    "resource": {
+      "id": "silicon",
+      "name": "Silicon",
+      "image": "/miracle/src/assets/silicon.png",
+      "craftResource": [
+        {
+          "id": "coal",
+          "image": "/miracle/src/assets/coal.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [6, 12, 24, 48, 96, 192, 384, 768, 1536, 3072],
+    "sellPrice": 6,
+    "unlockPrice": 50,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "copper",
+    "resource": {
+      "id": "copper",
+      "name": "Copper",
+      "image": "/miracle/src/assets/copper.png",
+      "craftResource": []
+    },
+    "craftResource": [],
+    "updatePrice": [7, 14, 28, 56, 112, 224, 448, 896, 1792, 3584],
+    "sellPrice": 7,
+    "unlockPrice": 60,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "transistor",
+    "resource": {
+      "id": "transistor",
+      "name": "Semiconductor",
+      "image": "/miracle/src/assets/transistor.png",
+      "craftResource": [
+        {
+          "id": "silicon",
+          "image": "/miracle/src/assets/silicon.png",
+          "count": 1
+        },
+		{
+          "id": "copper",
+          "image": "/miracle/src/assets/copper.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096],
+    "sellPrice": 8,
+    "unlockPrice": 70,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "calculator",
+    "resource": {
+      "id": "calculator",
+      "name": "Pocket calculator",
+      "image": "/miracle/src/assets/calculator.png",
+      "craftResource": [
+		{
+          "id": "plastic",
+          "image": "/miracle/src/assets/plastic.png",
+          "count": 6
+        },
+		{
+          "id": "battery",
+          "image": "/miracle/src/assets/battery.png",
+          "count": 1
+        },
+		{
+          "id": "microcircuit_1",
+          "image": "/miracle/src/assets/microcircuit_1.png",
+          "count": 1
+        },
+		{
+          "id": "glass",
+          "image": "/miracle/src/assets/glass.png",
+          "count": 2
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120],
+    "sellPrice": 10,
+    "unlockPrice": 90,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "microcircuit_1",
+    "resource": {
+      "id": "microcircuit_1",
+      "name": "Microcircuit",
+      "image": "/miracle/src/assets/microcircuit_1.png",
+      "craftResource": [
+		{
+          "id": "transistor",
+          "image": "/miracle/src/assets/transistor.png",
+          "count": 1
+        },
+		{
+          "id": "copper",
+          "image": "/miracle/src/assets/copper.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120],
+    "sellPrice": 10,
+    "unlockPrice": 90,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "graphite",
+    "resource": {
+      "id": "graphite",
+      "name": "Graphite",
+      "image": "/miracle/src/assets/graphite.png",
+      "craftResource": [
+		{
+          "id": "coal",
+          "image": "/miracle/src/assets/coal.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120],
+    "sellPrice": 10,
+    "unlockPrice": 90,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "battery",
+    "resource": {
+      "id": "battery",
+      "name": "Battery",
+      "image": "/miracle/src/assets/battery.png",
+      "craftResource": [
+		{
+          "id": "graphite",
+          "image": "/miracle/src/assets/graphite.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120],
+    "sellPrice": 10,
+    "unlockPrice": 90,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "walkman",
+    "resource": {
+      "id": "walkman",
+      "name": "Walkman",
+      "image": "/miracle/src/assets/walkman.png",
+      "craftResource": [
+		{
+          "id": "glass",
+          "image": "/miracle/src/assets/lens.png",
+          "count": 1
+        },
+		{
+          "id": "microcircuit_2",
+          "image": "/miracle/src/assets/microcircuit_2.png",
+          "count": 1
+        },
+		{
+          "id": "battery",
+          "image": "/miracle/src/assets/battery_lithium.png",
+          "count": 1
+        },
+		{
+          "id": "plastic",
+          "image": "/miracle/src/assets/plastic.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120],
+    "sellPrice": 10,
+    "unlockPrice": 90,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "microcircuit_2",
+    "resource": {
+      "id": "microcircuit_2",
+      "name": "Сhip",
+      "image": "/miracle/src/assets/microcircuit_2.png",
+      "craftResource": [
+		{
+          "id": "microcircuit_1",
+          "image": "/miracle/src/assets/microcircuit_1.png",
+          "count": 1
+        },
+		{
+          "id": "copper",
+          "image": "/miracle/src/assets/copper.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120],
+    "sellPrice": 10,
+    "unlockPrice": 90,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "lens",
+    "resource": {
+      "id": "lens",
+      "name": "Optical lens",
+      "image": "/miracle/src/assets/lens.png",
+      "craftResource": [
+		{
+          "id": "glass",
+          "image": "/miracle/src/assets/glass.png",
+          "count": 1
+        },
+		{
+          "id": "graphite",
+          "image": "/miracle/src/assets/graphite.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120],
+    "sellPrice": 10,
+    "unlockPrice": 90,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "battery_lithium",
+    "resource": {
+      "id": "battery_lithium",
+      "name": "Lithium battery",
+      "image": "/miracle/src/assets/battery_lithium.png",
+      "craftResource": [
+		{
+          "id": "silicon",
+          "image": "/miracle/src/assets/silicon.png",
+          "count": 1
+        },
+		{
+          "id": "battery",
+          "image": "/miracle/src/assets/battery.png",
+          "count": 1
+        },
+		{
+          "id": "copper",
+          "image": "/miracle/src/assets/copper.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120],
+    "sellPrice": 10,
+    "unlockPrice": 90,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  },
+  {
+    "id": "camcorder",
+    "resource": {
+      "id": "camcorder",
+      "name": "Camcorder",
+      "image": "/miracle/src/assets/camcorder.png",
+      "craftResource": [
+		{
+          "id": "lens",
+          "image": "/miracle/src/assets/lens.png",
+          "count": 1
+        },
+		{
+          "id": "microcircuit_2",
+          "image": "/miracle/src/assets/microcircuit_2.png",
+          "count": 1
+        },
+		{
+          "id": "battery_lithium",
+          "image": "/miracle/src/assets/battery_lithium.png",
+          "count": 1
+        },
+		{
+          "id": "plastic",
+          "image": "/miracle/src/assets/plastic.png",
+          "count": 1
+        },
+		{
+          "id": "copper",
+          "image": "/miracle/src/assets/copper.png",
+          "count": 1
+        }
+      ]
+    },
+    "craftResource": [],
+    "updatePrice": [10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120],
+    "sellPrice": 10,
+    "unlockPrice": 90,
+    "store": 0,
+    "maxStore": 10,
+    "levelStore": 0,
+    "fabric": 0,
+    "levelFabric": 0,
+    "maxFabric": 10
+  }
+]

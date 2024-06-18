@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { Body, Header } from "../Components";
 import { BackButton } from "../Components";
 import barsIcon from "../assets/bars.png";
-import dwarfSrc from "../assets/dwarf.jpeg";
+// import dwarfSrc from "../assets/dwarf.jpeg";
 import { MineType, ResourceId, resourceList, userStore } from "../store"; // Assuming you have a 'types' file that defines the 'MineType' type
 
 const isMineType = (str?: string): ResourceId | null =>
@@ -69,7 +69,7 @@ const MineBase = ({ mine }: { mine: MineType }) => {
           </div>
 
           <div className="flex w-full items-center justify-between">
-            <img className="w-12 h-12 rounded-full" src={dwarfSrc} />
+            {/* <img className="w-12 h-12 rounded-full" src={dwarfSrc} /> */}
             <div className="flex flex-col">
               <span className="text-2xl text-white">Max:{mine.maxStore}</span>
               <span className="text-2xl text-gray-200">
